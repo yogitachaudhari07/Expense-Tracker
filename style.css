@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+ background: linear-gradient(135deg, #2e8b57, #a8d5ba);
+}
+.heading-box{
+  display: flex;
+  justify-content: space-between;
+ margin: 2rem;
+ padding: 0 1rem;
+}
+.heading{
+  font-size: 2.5rem;
+}
+#themeToggle{
+  height: 3rem;
+  width: 3rem;
+}
+.balance-info{
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+}
+.balance-container{
+  max-width: 1150px;
+  margin: 0 auto;
+  background-color: #2e8b57;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+}
+#balance{
+  font-size: 4rem;
+  margin-bottom: 27px;
+}
+.income-expense-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.income,
+.expenses {
+  background-color: white;
+  padding: 24px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+.income:hover,
+.expenses:hover {
+  transform: translateY(-2px);
+}
+.income h3 {
+  color: #059669;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.expenses h3 {
+  color: #dc2626;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.income p,
+.expenses p {
+  margin-top: 8px;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+.income p {
+  color: #059669;
+}
+.expenses p {
+  color: #dc2626;
+}
+.main-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1.5rem;
+  height: 500px;
+}
+.form-container{
+  background: linear-gradient(135deg, #f6f8fb, #f1f4f8);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form-container h2{
+  margin-bottom: 1.5rem;
+}
+.form-container form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form-group{
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #4a5568;
+  font-weight: 500;
+}
+input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+input:hover {
+  border-color: #cbd5e0;
+}
+small {
+  color: #718096;
+  font-size: 0.875rem;
+  margin-top: 4px;
+  display: block;
+}
+ button{
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+  margin-top: auto;
+}
+ button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
+}
+ button:active {
+  transform: translateY(0);
+}
+
+.transaction-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#transaction-list {
+  list-style: none;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 8px;
+  flex-grow: 1;
+}
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  border-right: 5px solid;
+  animation: slideIn 0.3s ease;
+}
+.transaction .text {
+  flex: 1;
+}
+.transaction .amount {
+  font-weight: 600;
+  margin-right: 10px;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.transaction:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.transaction.income {
+  border-right-color: #059669;
+}
+.transaction.expense {
+  border-right-color: #dc2626;
+}
+.transaction .delete-btn {
+  background: none;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 1.4rem;
+  opacity: 0;
+  transition: all 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 12px;
+  width: 3rem;
+}
+.transaction:hover .delete-btn {
+  opacity: 1;
+}
+.transaction .delete-btn:hover {
+  background-color: #fee2e2;
+  transform: scale(1.1);
+}
+body.dark {
+  background: linear-gradient(135deg, #020617, #111827);
+  color: #e5e7eb;
+}
+body.dark .balance-info {
+  background-color: #020617;
+}
+body.dark .balance-container {
+  background-color: #111827;
+}
+body.dark .income,
+body.dark .expenses,
+body.dark .transaction,
+body.dark .form-container {
+  background-color: #1f2933;
+  color: #e5e7eb;
+}
+body.dark .form-container h2{
+  margin-bottom: 1.5rem;
+  color: black;
+}
+body.dark input {
+  background-color: #020617;
+  color: white;
+  border-color: #374151;
+}
+@media (max-width: 600px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .heading-box {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .balance-container {
+    padding: 1.2rem;
+  }
+
+  #balance {
+    font-size: 2.8rem;
+  }
+
+  .income-expense-container {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .transaction-container,
+  .form-container {
+    height: auto;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .balance-container {
+    padding: 1.5rem;
+  }
+
+  #balance {
+    font-size: 3.5rem;
+  }
+}
