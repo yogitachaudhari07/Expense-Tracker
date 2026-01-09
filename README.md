@@ -34,4 +34,4 @@ Expense-Tracker/
 │── script.js
 │── README.md
 
-![Expense Tracker Preview](exp.png)
+![Expense Tracker Preview](expense.png)
