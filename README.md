@@ -35,4 +35,7 @@ Expense-Tracker/
 │── README.md
 │── expense.png
 
-![Expense Tracker Preview](./expense.png)
+## 🖼️ Project Preview
+
+![Expense Tracker Preview](expense.png)
+
