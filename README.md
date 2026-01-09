@@ -25,17 +25,10 @@ It helps users track income and expenses, view balance in real time, and switch 
 
 ---
 
-## 📂 Project Structure
-
-```text
-Expense-Tracker/
-│── index.html
-│── style.css
-│── script.js
-│── README.md
-│── expense.png
-
 ## 🖼️ Project Preview
 
-![Expense Tracker Preview](expense.png)
+<p style="align: center">
+  <img src="expense.png" width="900" alt="Expense Tracker Preview">
+</p>
+
 
