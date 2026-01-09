@@ -33,5 +33,6 @@ Expense-Tracker/
 │── style.css
 │── script.js
 │── README.md
+│── expense.png
 
 ![Expense Tracker Preview](./expense.png)
